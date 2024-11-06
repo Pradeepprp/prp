@@ -14,7 +14,7 @@ resource "aws_security_group" "public_sg" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Allow all IPs
+    cidr_blocks = ["0.0.0.0/0"]  # Allow all IPs, we can input the client CIDR if required
   }
 
   # Outbound rules for Public SG
